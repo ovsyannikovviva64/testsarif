@@ -1,6 +1,5 @@
 {
   "version": "2.1.0",
-  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs": [
     {
       "taxonomies": [
@@ -31,87 +30,46 @@
           "isComprehensive": false
         }
       ],
-      "tool": { 
+      "tool": {
         "driver": {
-          "name": "PVS-Studio",
-          "semanticVersion": "7.09",
+          "name": "CodeScanner",
           "supportedTaxonomies": [
             {
-              "name": "Pvs Studio"
-            },
-            {
               "name": "CWE",
-              "index": 1,
               "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82"
-            }
-          ],
-          "taxa": [
-            {
-              "id": "MemoryManagement",
-              "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
-              "shortDescription": {
-                "text": "Improper usage of dynamic memory."
-              }
-            },
-            {
-              "id": "Cryptography",
-              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB86",
-              "shortDescription": {
-                "text": "Insecure use of cryptography."
-              }
             }
           ],
           "rules": [
             {
-              "id": "V570",
-              "name": "V570: The variable is assigned to itself",
+              "id": "CA2101",
               "shortDescription": {
-                "text": "The variable is assigned to itself"
-              },
-              "fullDescription": {
-                "text": "The variable is assigned to itself. More information https://www.viva64.com/en/w/v570/",
-                "markdown": "The variable is assigned to itself. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v570"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              },
-              "help": {
-                "text": "https://www.viva64.com/en/w/v570"
+                "text": "Failed to release dynamic memory."
               },
               "relationships": [
                 {
-                    "target": {
-                      "id": "MemoryManagement",
-                      "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
-                      "toolComponent": {
-                        "name": "CodeScanner"
-                      }
+                  "target": {
+                    "id": "401",
+                    "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+                    "toolComponent": {
+                      "name": "CWE",
+                      "guid": "10F28368-3A92-4396-A318-75B9743282F6"
                     }
+                  },
+                  "kinds": [
+                    "superset"
+                  ]
                 }
-                ]
+              ]
             }
           ]
         }
       },
       "results": [
         {
-          "ruleId": "V570",
+          "ruleId": "CA2101",
           "message": {
-            "text": "The 'a' variable is assigned to itself."
+            "text": "Memory allocated in variable 'p' was not released."
           },
-          "locations": [
-            {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp",
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 10
-                }
-              }
-            }
-          ],
           "taxa": [
             {
               "id": "401",
@@ -123,13 +81,7 @@
             }
           ]
         }
-      ],
-      "newlineSequences": [
-        "\r\n",
-        "\n",
-        ""
-      ],
-      "columnKind": "utf16CodeUnits"
+      ]
     }
   ]
 }
