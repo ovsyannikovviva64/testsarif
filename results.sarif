@@ -49,11 +49,13 @@
                 "text": "The variable is assigned to itself"
               },
               "fullDescription": {
-                "text": "The variable is assigned to itself. More information [here](https://www.viva64.com/en/w/v570/)"
+                "text": "The variable is assigned to itself. More information https://www.viva64.com/en/w/v570/",
+                "markdown": "The variable is assigned to itself. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v570"
               },
               "defaultConfiguration": {
                 "level": "error"
-              }
+              },
+              "helpUri": "https://www.viva64.com/en/w/v570"
             }
           ]
         }
