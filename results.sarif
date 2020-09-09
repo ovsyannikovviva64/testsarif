@@ -41,6 +41,37 @@
               "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82"
             }
           ],
+          "taxa": [
+
+            {
+    
+              "id": "MemoryManagement",
+    
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
+    
+              "shortDescription": {
+    
+                "text": "Improper usage of dynamic memory."
+    
+              }
+    
+            },
+    
+            {
+    
+              "id": "Cryptography",
+    
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB86",
+    
+              "shortDescription": {
+    
+                "text": "Insecure use of cryptography."
+    
+              }
+    
+            }
+    
+          ],
           "rules": [
             {
               "id": "V570",
@@ -55,7 +86,9 @@
               "defaultConfiguration": {
                 "level": "error"
               },
-              "helpUri": "https://www.viva64.com/en/w/v570"
+              "help": {
+                "text": "https://www.viva64.com/en/w/v570"
+              }
             }
           ]
         }
