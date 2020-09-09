@@ -37,28 +37,8 @@
           "semanticVersion": "7.09",
           "supportedTaxonomies": [
             {
-              "name": "Pvs Studio"
-            },
-            {
               "name": "CWE",
-              "index": 1,
               "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82"
-            }
-          ],
-          "taxa": [
-            {
-              "id": "MemoryManagement",
-              "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
-              "shortDescription": {
-                "text": "Improper usage of dynamic memory."
-              }
-            },
-            {
-              "id": "Cryptography",
-              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB86",
-              "shortDescription": {
-                "text": "Insecure use of cryptography."
-              }
             }
           ],
           "rules": [
@@ -88,12 +68,16 @@
               "relationships": [
                 {
                     "target": {
-                      "id": "MemoryManagement",
-                      "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
+                      "id": "401",
+                      "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
                       "toolComponent": {
-                        "name": "CodeScanner"
+                        "name": "CWE",
+                        "guid": "10F28368-3A92-4396-A318-75B9743282F6"
                       }
-                    }
+                    },
+                    "kinds": [
+                      "superset"
+                    ]
                 }
                 ]
             }
@@ -130,13 +114,7 @@
             }
           ]
         }
-      ],
-      "newlineSequences": [
-        "\r\n",
-        "\n",
-        ""
-      ],
-      "columnKind": "utf16CodeUnits"
+      ]
     }
   ]
 }
