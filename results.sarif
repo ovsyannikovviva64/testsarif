@@ -36,7 +36,7 @@
               "fullDescription": {
                 "text": "If a function is intended to be a constructor, it should always be invoked with 'new'. Otherwise, it should always be invoked as a normal function, that is, without 'new'."
               },
-              "defaultConfiguration": null,
+
               "properties": {
                 "tags": [
                   "reliability",
@@ -246,7 +246,7 @@
         "\r\n",
         "\n",
         "",
-        " "
+        "ab"
       ],
       "columnKind": "utf16CodeUnits"
     }
