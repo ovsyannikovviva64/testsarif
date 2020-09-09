@@ -101,7 +101,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp"
+                  "uri": "ConsoleApplication1.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10
                 }
               }
             }
@@ -117,7 +121,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp"
+                  "uri": "ConsoleApplication1.cpp", 
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10
                 }
               }
             }
