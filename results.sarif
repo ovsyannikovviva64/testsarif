@@ -105,11 +105,7 @@
                 "guid": "10F28368-3A92-4396-A318-75B9743282F6"
               }
             }
-          ],
-          "partialFingerprints": {
-            "primaryLocationLineHash": "39fa2ee980eb94b0:1",
-            "primaryLocationStartColumnFingerprint": "4"
-          }
+          ]
         },
         {
           "ruleId": "js/inconsistent-use-of-new",
