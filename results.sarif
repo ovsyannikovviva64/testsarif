@@ -70,6 +70,19 @@
           "message": {
             "text": "Memory allocated in variable 'p' was not released."
           },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ConsoleApplication1.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 10
+                }
+              }
+            }
+          ],
           "taxa": [
             {
               "id": "401",
