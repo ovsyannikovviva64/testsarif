@@ -1,101 +1,110 @@
 {
-  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
   "version": "2.1.0",
-  "properties": {
-    "comment": "This sample demonstrates the use of taxonomies to classify rules."
-  },
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs": [
     {
-      "tool": {
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "3.2",
+          "releaseDateUtc": "2019-01-03",
+          "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v3.2.pdf/",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v3.2.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "taxa": [
+            {
+              "id": "401",
+              "guid": "10F28368-3A92-4396-A318-75B9743282F6",
+              "name": "Memory Leak",
+              "shortDescription": {
+                "text": "Missing Release of Memory After Effective Lifetime"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            }
+          ],
+          "isComprehensive": false
+        }
+      ],
+      "tool": { 
         "driver": {
-          "name": "SarifSamples",
-          "version": "1.0",
+          "name": "PVS-Studio",
+          "semanticVersion": "7.09",
+          "supportedTaxonomies": [
+            {
+              "name": "Pvs Studio"
+            },
+            {
+              "name": "CWE",
+              "index": 1,
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82"
+            }
+          ],
+          "taxa": [
+            {
+              "id": "MemoryManagement",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
+              "shortDescription": {
+                "text": "Improper usage of dynamic memory."
+              }
+            },
+            {
+              "id": "Cryptography",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB86",
+              "shortDescription": {
+                "text": "Insecure use of cryptography."
+              }
+            }
+          ],
           "rules": [
             {
-              "id": "TUT0001",
+              "id": "V570",
+              "name": "V570: The variable is assigned to itself",
+              "shortDescription": {
+                "text": "The variable is assigned to itself"
+              },
+              "fullDescription": {
+                "text": "The variable is assigned to itself. More information https://www.viva64.com/en/w/v570/",
+                "markdown": "The variable is assigned to itself. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v570"
+              },
               "defaultConfiguration": {
                 "level": "error"
               },
-              "relationships": [
-                {
-                  "target": {
-                    "id": "RQL1001",
-                    "index": 0,
-                    "toolComponent": {
-                      "name": "Requirement levels",
-                      "guid": "1A567403-868F-405E-92CF-771A9ECB03A1",
-                      "index": 0
-                    }
-                  },
-                  "kinds": [
-                    "superset"
-                  ],
-                  "description": {
-                    "text": "This relationship specifies that this rule is classified as 'Required'."
-                  }
-                }
-              ]
-            },
-            {
-              "id": "TUT0002",
-              "defaultConfiguration": {
-                "level": "warning"
+              "help": {
+                "text": "https://www.viva64.com/en/w/v570"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-079",
+                  "external/cwe/cwe-116"
+                ]
               },
               "relationships": [
                 {
-                  "target": {
-                    "id": "RQL1002",
-                    "index": 1,
-                    "toolComponent": {
-                      "name": "Requirement levels",
-                      "guid": "1A567403-868F-405E-92CF-771A9ECB03A1",
-                      "index": 0
+                    "target": {
+                      "id": "MemoryManagement",
+                      "guid": "A9282C88-F1FE-4A01-8137-E8D2B037AB86",
+                      "toolComponent": {
+                        "name": "CodeScanner"
+                      }
                     }
-                  },
-                  "kinds": [
-                    "superset"
-                  ],
-                  "description": {
-                    "text": "This relationship specifies that this rule is classified as 'Recommended'."
-                  }
                 }
-              ]
+                ]
             }
           ]
         }
       },
-      "taxonomies": [
-        {
-          "guid": "1A567403-868F-405E-92CF-771A9ECB03A1",
-          "name": "Requirement levels",
-          "shortDescription": {
-            "text": "This taxonomy classifies rules according to whether their use is required or recommended by company policy."
-          },
-          "taxa": [
-            {
-              "id": "RQL1001",
-              "name": "Required",
-              "shortDescription": {
-                "text": "Rules in this category are required by company policy. All violations must be fixed unless an exemption is granted."
-              }
-            },
-            {
-              "id": "RQL1002",
-              "name": "Recommended",
-              "shortDescription": {
-                "text": "Rules in this category are recommended but not required by company policy. Violations should be fixed but an exemption is not required to suppress a result."
-              }
-            }
-          ]
-        }
-      ],
       "results": [
         {
-          "ruleId": "TUT1001",
-          "ruleIndex": 0,
-          "level": "error",
+          "ruleId": "V570",
           "message": {
-            "text": "This result violates a rule that is classified as 'Required'."
+            "text": "The 'a' variable is assigned to itself."
           },
           "locations": [
             {
@@ -109,28 +118,23 @@
                 }
               }
             }
-          ]
-        },
-        {
-          "ruleId": "TUT1002",
-          "ruleIndex": 1,
-          "message": {
-            "text": "This result violates a rule that is classified as 'Recommended'."
-          },
-          "locations": [
+          ],
+          "taxa": [
             {
-              "physicalLocation": {
-                "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp", 
-                  "uriBaseId": "%SRCROOT%"
-                },
-                "region": {
-                  "startLine": 10
-                }
+              "id": "401",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+              "toolComponent": {
+                "name": "CWE",
+                "guid": "10F28368-3A92-4396-A318-75B9743282F6"
               }
             }
           ]
         }
+      ],
+      "newlineSequences": [
+        "\r\n",
+        "\n",
+        ""
       ],
       "columnKind": "utf16CodeUnits"
     }
