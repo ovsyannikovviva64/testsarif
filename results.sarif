@@ -1,30 +1,58 @@
 {
-  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "version": "2.1.0",
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs": [
     {
-      "tool": { 
-        "driver": {
-          "name": "Tool Name",
-          "semanticVersion": "2.0.0",
-          "rules": [
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "3.2",
+          "releaseDateUtc": "2019-01-03",
+          "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v3.2.pdf/",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v3.2.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "taxa": [
             {
-              "id": "js/unused-local-variable",
-              "name": "js/unused-local-variable",
+              "id": "401",
+              "guid": "10F28368-3A92-4396-A318-75B9743282F6",
+              "name": "Memory Leak",
               "shortDescription": {
-                "text": "Unused variable, import, function or class"
-              },
-              "fullDescription": {
-                "text": "Unused variables, imports, functions or classes may be a symptom of a bug and should be examined carefully."
+                "text": "Missing Release of Memory After Effective Lifetime"
               },
               "defaultConfiguration": {
-                "level": "note"
+                "level": "warning"
+              }
+            }
+          ],
+          "isComprehensive": false
+        }
+      ],
+      "tool": { 
+        "driver": {
+          "name": "PVS-Studio",
+          "semanticVersion": "7.09",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82"
+            }
+          ],
+          "rules": [
+            {
+              "id": "V570",
+              "name": "V570: The variable is assigned to itself",
+              "shortDescription": {
+                "text": "The variable is assigned to itself"
               },
-              "properties": {
-                "tags": [
-                  "maintainability"
-                ],
-                "precision": "very-high"
+              "fullDescription": {
+                "text": "The variable is assigned to itself. More information [here](https://www.viva64.com/en/w/v570/)"
+              },
+              "defaultConfiguration": {
+                "level": "error"
               }
             },
             {
@@ -51,24 +79,30 @@
       },
       "results": [
         {
-          "ruleId": "js/unused-local-variable",
-          "ruleIndex": 0,
+          "ruleId": "V570",
           "message": {
-            "text": "Unused variable foo."
+            "text": "The 'a' variable is assigned to itself."
           },
           "locations": [
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "main.js",
-                  "uriBaseId": "%SRCROOT%",
-                  "index": 0
+                  "uri": "ConsoleApplication1.cpp",
+                  "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
-                  "startLine": 2,
-                  "startColumn": 7,
-                  "endColumn": 10
+                  "startLine": 10
                 }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "id": "401",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+              "toolComponent": {
+                "name": "CWE",
+                "guid": "10F28368-3A92-4396-A318-75B9743282F6"
               }
             }
           ],
