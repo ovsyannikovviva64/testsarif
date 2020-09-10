@@ -68,7 +68,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/ovsyannikov/source/repos/ConsoleApplication1/ConsoleApplication1.cpp",
+                  "uri": "ConsoleApplication1.cpp",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
@@ -88,7 +88,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "file:///C:/Users/ovsyannikov/source/repos/ConsoleApplication1/ConsoleApplication1.cpp",
+                  "uri": "ConsoleApplication1.cpp",
                   "uriBaseId": "%SRCROOT%"
                 },
                 "region": {
