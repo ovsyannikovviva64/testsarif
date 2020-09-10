@@ -31,29 +31,6 @@
                   "external/cwe/cwe-116"
                 ]
               }
-            },
-            {
-              "id": "591",
-              "name": "V591: Non-void function should return a value.",
-              "shortDescription": {
-                "text": "Non-void function should return a value."
-              },
-              "fullDescription": {
-                "text": "Non-void function should return a value. More information https://www.viva64.com/en/w/v591/",
-                "markdown": "Non-void function should return a value. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v591/"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              },
-              "help": {
-                "text": "https://www.viva64.com/en/w/v591"
-              },
-              "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-393"
-                ]
-              }
             }
           ]
         }
