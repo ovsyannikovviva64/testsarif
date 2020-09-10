@@ -78,6 +78,26 @@
               }
             }
           ]
+        },
+        {
+          "ruleId": "V591",
+          "message": {
+            "text": "The 'main' function does not return a value, which is equivalent to 'return 0'. It is possible that this is an unintended behavior. "
+          },
+          "level": "note",
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ConsoleApplication1.cpp",
+                  "uriBaseId": "%SRCROOT%"
+                },
+                "region": {
+                  "startLine": 11
+                }
+              }
+            }
+          ]
         }
       ]
     }
