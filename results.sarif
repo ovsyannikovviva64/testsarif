@@ -66,11 +66,22 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp",
-                  "uriBaseId": "%SRCROOT%"
+                  "uri": "ConsoleApplication1.cpp"
                 },
                 "region": {
                   "startLine": 10
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ConsoleApplication1.cpp"
+                },
+                "region": {
+                  "startLine": 4
                 }
               }
             }
@@ -86,8 +97,7 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp",
-                  "uriBaseId": "%SRCROOT%"
+                  "uri": "ConsoleApplication1.cpp"
                 },
                 "region": {
                   "startLine": 11
