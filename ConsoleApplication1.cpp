@@ -7,8 +7,10 @@ int main()
 {
     std::cout << "Hello World!\n";
     int a = 0; // ddd
-    a = a; // ok t dddd bla bla xxx  uuuudfdf ffff rtyrtyrty
-} // end uuuu fdfjjjjj
+    a = a; // ok t dddd bla bla xxx  uuuudfdf ffff rtyrtyrty 555
+} // end uuuu fdfjjjjj fff
+
+void ff() {}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
