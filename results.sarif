@@ -6,7 +6,7 @@
        "tool": { 
         "driver": {
           "name": "PVS-Studio",
-          "version": "7.09",
+          "semanticVersion": "7.09",
           "rules": [
             {
               "id": "V570",
