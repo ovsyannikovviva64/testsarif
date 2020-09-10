@@ -33,8 +33,24 @@
               }
             },
             {
-              "id": "591",
-              "name": "V591: Non-void function should return a value."
+              "id": "V591",
+              "name": "V591: Non-void function should return a value.",
+              "shortDescription": {
+                "text": "Non-void function should return a value."
+              },
+              "fullDescription": {
+                "text": "Non-void function should return a value. More information https://www.viva64.com/en/w/v591/",
+                "markdown": "Non-void function should return a value. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v591/"
+              },
+              "help": {
+                "text": "https://www.viva64.com/en/w/v591"
+              },
+              "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-393"
+                ]
+              }
             }
           ]
         }
@@ -65,7 +81,7 @@
           "message": {
             "text": "The 'main' function does not return a value, which is equivalent to 'return 0'. It is possible that this is an unintended behavior. "
           },
-          "level": "error",
+          "level": "note",
           "locations": [
             {
               "physicalLocation": {
