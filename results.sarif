@@ -1,12 +1,46 @@
-{ 
+{
   "version": "2.1.0",
   "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs": [
     {
-       "tool": { 
+      "taxonomies": [
+        {
+          "name": "CWE",
+          "version": "3.2",
+          "releaseDateUtc": "2019-01-03",
+          "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+          "informationUri": "https://cwe.mitre.org/data/published/cwe_v3.2.pdf/",
+          "downloadUri": "https://cwe.mitre.org/data/xml/cwec_v3.2.xml.zip",
+          "organization": "MITRE",
+          "shortDescription": {
+            "text": "The MITRE Common Weakness Enumeration"
+          },
+          "taxa": [
+            {
+              "id": "401",
+              "guid": "10F28368-3A92-4396-A318-75B9743282F6",
+              "name": "Memory Leak",
+              "shortDescription": {
+                "text": "Missing Release of Memory After Effective Lifetime"
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              }
+            }
+          ],
+          "isComprehensive": false
+        }
+      ],
+      "tool": { 
         "driver": {
           "name": "PVS-Studio",
           "semanticVersion": "7.09",
+          "supportedTaxonomies": [
+            {
+              "name": "CWE",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82"
+            }
+          ],
           "rules": [
             {
               "id": "V570",
@@ -30,7 +64,22 @@
                   "external/cwe/cwe-079",
                   "external/cwe/cwe-116"
                 ]
-              }
+              },
+              "relationships": [
+                {
+                    "target": {
+                      "id": "401",
+                      "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+                      "toolComponent": {
+                        "name": "CWE",
+                        "guid": "10F28368-3A92-4396-A318-75B9743282F6"
+                      }
+                    },
+                    "kinds": [
+                      "superset"
+                    ]
+                }
+                ]
             }
           ]
         }
@@ -41,7 +90,6 @@
           "message": {
             "text": "The 'a' variable is assigned to itself."
           },
-          "level": "error",
           "locations": [
             {
               "physicalLocation": {
@@ -52,6 +100,16 @@
                 "region": {
                   "startLine": 10
                 }
+              }
+            }
+          ],
+          "taxa": [
+            {
+              "id": "401",
+              "guid": "A9282C88-F1FE-4A01-8137-E8D2A037AB82",
+              "toolComponent": {
+                "name": "CWE",
+                "guid": "10F28368-3A92-4396-A318-75B9743282F6"
               }
             }
           ]
