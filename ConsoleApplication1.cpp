@@ -7,7 +7,7 @@ int main()
 {
     std::cout << "Hello World!\n";
     int a = 0;
-    a = a; // ok or not?
+    a = a; // ok or not dddd
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
