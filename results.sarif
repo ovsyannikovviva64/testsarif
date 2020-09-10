@@ -47,12 +47,6 @@
               },
               "help": {
                 "text": "https://www.viva64.com/en/w/v591"
-              },
-              "properties": {
-                "tags": [
-                  "security",
-                  "external/cwe/cwe-393"
-                ]
               }
             }
           ]
