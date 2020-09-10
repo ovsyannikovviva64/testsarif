@@ -6,8 +6,8 @@
 int main()
 {
     std::cout << "Hello World!\n";
-    int a = 0; 
-    a = a; // ok or not dddd ddd
+    int a = 0; ddd
+    a = a; // ok or not dddd bla bla
 } //
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
