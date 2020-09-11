@@ -7,8 +7,8 @@ int main()
 {
     std::cout << "Hello World!\n";
     int a = 0; // ddd
-    a = a; // ok t dddd bla bla xxx  uuuudfdf ffff rtyrtyrty 555
-} // end uuuu fdfjjjjj fff
+    a = a; // ok t dddd bla bl
+} // end uuuu f
 
 void ff() {}
 

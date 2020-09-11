@@ -66,10 +66,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp"
+                  "uri": "D:/sarif/testsarif/ConsoleApplication1.cpp"
                 },
                 "region": {
-                  "startLine": 10
+                  "startLine": 10,
+                  "endLine": 11
                 }
               }
             }
@@ -85,10 +86,11 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp"
+                  "uri": "D:/sarif/testsarif/ConsoleApplication1.cpp"
                 },
                 "region": {
-                  "startLine": 11
+                  "startLine": 11,
+                  "endLine": 12
                 }
               }
             }
