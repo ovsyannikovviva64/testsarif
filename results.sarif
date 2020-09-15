@@ -1,46 +1,38 @@
-{ 
+{
   "version": "2.1.0",
   "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   "runs": [
     {
-       "tool": { 
+       "tool": {
         "driver": {
           "name": "PVS-Studio",
-          "semanticVersion": "7.09",
+          "semanticVersion": "7.09.0.0",
           "rules": [
             {
               "id": "V570",
-              "name": "V570: The variable is assigned to itself",
-              "shortDescription": { "text": "The variable is assigned to itself" },
-              "fullDescription": {
-                "text": "The variable is assigned to itself. More information https://www.viva64.com/en/w/v570/",
-                "markdown": "The variable is assigned to itself. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v570"
-              },
-              "defaultConfiguration": {
-                "level": "error"
-              },
-              "help": { "text": "https://www.viva64.com/en/w/v570" },
-              "properties": { "tags": [ "security", "external/cwe/cwe-079", "external/cwe/cwe-116" ] }
-            },
-            {
-              "id": "V591",
-              "name": "V591: Non-void function should return a value.",
-              "shortDescription": {
-                "text": "Non-void function should return a value."
-              },
-              "fullDescription": {
-                "text": "Non-void function should return a value. More information https://www.viva64.com/en/w/v591/",
-                "markdown": "Non-void function should return a value. More information[xss].\n\n[xss]: https://www.viva64.com/en/w/v591/"
-              },
+              "name": "Rule V570",
               "help": {
-                "text": "https://www.viva64.com/en/w/v591"
-              },
-              "properties": {
+                "text": "https://www.viva64.com/en/w/v570/"
+              }
+              , "properties": {
+                "tags": [
+                  "security",
+                  "external/cwe/cwe-480"
+                 ]
+               }
+            }
+            ,{
+              "id": "V591",
+              "name": "Rule V591",
+              "help": {
+                "text": "https://www.viva64.com/en/w/v591/"
+              }
+              , "properties": {
                 "tags": [
                   "security",
                   "external/cwe/cwe-393"
-                ]
-              }
+                 ]
+               }
             }
           ]
         }
@@ -56,19 +48,19 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp"
+                  "uri": "/ConsoleApplication1.cpp"
                 },
                 "region": {
                   "startLine": 10,
                   "endLine": 10,
-                  "startColumn": 5,
-                  "endColumn": 11
+                  "startColumn": 1,
+                  "endColumn": 2147483647
                 }
               }
             }
           ]
-        },
-        {
+        }
+        ,{
           "ruleId": "V591",
           "message": {
             "text": "The 'main' function does not return a value, which is equivalent to 'return 0'. It is possible that this is an unintended behavior. "
@@ -78,11 +70,13 @@
             {
               "physicalLocation": {
                 "artifactLocation": {
-                  "uri": "ConsoleApplication1.cpp"
+                  "uri": "/ConsoleApplication1.cpp"
                 },
                 "region": {
                   "startLine": 11,
-                  "endLine": 11
+                  "endLine": 11,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
                 }
               }
             }
