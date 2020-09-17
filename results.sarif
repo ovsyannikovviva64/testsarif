@@ -80,6 +80,21 @@
                 }
               }
             }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "ConsoleApplication1.cpp"
+                },
+                "region": {
+                  "startLine": 6,
+                  "endLine": 6,
+                  "startColumn": 1,
+                  "endColumn": 2147483647
+                }
+              }
+            }
           ]
         }
       ]
