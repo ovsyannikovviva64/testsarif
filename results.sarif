@@ -58,7 +58,14 @@
               }
             }
           ]
-
+          ,"relatedLocations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": { "uri": "BestProjectCpp/BestCode.cpp"},
+                "region": {  }
+              }
+            }
+          ]
         }
         ,{
           "ruleId": "V591",
