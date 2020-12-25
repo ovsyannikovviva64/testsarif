@@ -11,20 +11,22 @@
           "rules": [
             {
               "id": "V570",
-              "name": "Rule V570",
+              "name": "RuleV570",
               "help": { "text": "https://www.viva64.com/en/w/v570/" }
               , "helpUri": "https://www.viva64.com/en/w/v570/"
               ,"properties": { "tags": [ "security", "external/cwe/cwe-480" ] }
             }
             ,{
               "id": "V763",
-              "name": "Rule V763",
+              "name": "RuleV763",
               "help": { "text": "https://www.viva64.com/en/w/v763/" }
+              , "helpUri": "https://www.viva64.com/en/w/v763/"
             }
             ,{
               "id": "V591",
-              "name": "Rule V591",
+              "name": "RuleV591",
               "help": { "text": "https://www.viva64.com/en/w/v591/" }
+              , "helpUri": "https://www.viva64.com/en/w/v591/"
               ,"properties": { "tags": [ "security", "external/cwe/cwe-393" ] }
             }
           ]
